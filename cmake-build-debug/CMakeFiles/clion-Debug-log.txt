@@ -1,0 +1,4 @@
+/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/Jetbrains/clion-2025.1.3/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -G Ninja -S /home/cat/Documents/EasyLinux -B /home/cat/Documents/EasyLinux/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/cat/Documents/EasyLinux/cmake-build-debug
