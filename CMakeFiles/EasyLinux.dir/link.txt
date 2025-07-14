@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/EasyLinux.dir/link.d CMakeFiles/EasyLinux.dir/main.c.o -o EasyLinux

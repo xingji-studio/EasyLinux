@@ -23,6 +23,10 @@
 			"path" : "cmake-build-debug/CMakeFiles/3.31.6/CMakeCCompiler.cmake"
 		},
 		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.31.6/CMakeCXXCompiler.cmake"
+		},
+		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake"
@@ -121,6 +125,86 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

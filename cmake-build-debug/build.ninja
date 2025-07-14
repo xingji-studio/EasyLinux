@@ -41,37 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/cat/Documents/EasyLinux/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target EasyLinux
+# Object build statements for EXECUTABLE target main
 
 
 #############################################
-# Order-only phony target for EasyLinux
+# Order-only phony target for main
 
-build cmake_object_order_depends_target_EasyLinux: phony || .
+build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/EasyLinux.dir/main.c.o: C_COMPILER__EasyLinux_unscanned_Debug /home/cat/Documents/EasyLinux/main.c || cmake_object_order_depends_target_EasyLinux
-  DEP_FILE = CMakeFiles/EasyLinux.dir/main.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -Wall -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/graphene-1.0/include -mfpmath=sse -msse -msse2 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -pthread -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lharfbuzz -lvulkan -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
-  OBJECT_DIR = CMakeFiles/EasyLinux.dir
-  OBJECT_FILE_DIR = CMakeFiles/EasyLinux.dir
+build CMakeFiles/main.dir/src/main.c.o: C_COMPILER__main_unscanned_Debug /home/cat/Documents/EasyLinux/src/main.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/src/main.c.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cloudproviders -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/include/fribidi -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gio-unix-2.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target EasyLinux
+# Link build statements for EXECUTABLE target main
 
 
 #############################################
-# Link the executable EasyLinux
+# Link the executable main
 
-build EasyLinux: C_EXECUTABLE_LINKER__EasyLinux_Debug CMakeFiles/EasyLinux.dir/main.c.o
-  DEP_FILE = CMakeFiles/EasyLinux.dir/link.d
+build main: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.c.o
+  DEP_FILE = CMakeFiles/main.dir/link.d
   FLAGS = -g
-  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/EasyLinux.dir/link.d
-  OBJECT_DIR = CMakeFiles/EasyLinux.dir
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/main.dir/link.d
+  LINK_LIBRARIES = -lgtk-3  -lgdk-3  -lz  -lpangocairo-1.0  -lcairo-gobject  -lgdk_pixbuf-2.0  -latk-1.0  -lpango-1.0  -lcairo  -lharfbuzz  -lgio-2.0  -lgobject-2.0  -lglib-2.0
+  OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = EasyLinux
-  TARGET_PDB = EasyLinux.dbg
+  TARGET_FILE = main
+  TARGET_PDB = main.dbg
 
 
 #############################################
@@ -107,14 +109,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/cat/Documents/EasyLinux/cmake-build-debug
 
-build codegen: phony
-
-# =============================================================================
-
-#############################################
-# Folder: /home/cat/Documents/EasyLinux/cmake-build-debug
-
-build all: phony EasyLinux
+build all: phony main
 
 # =============================================================================
 # Built-in targets
@@ -123,14 +118,14 @@ build all: phony EasyLinux
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/cat/Documents/EasyLinux/CMakeLists.txt /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/cat/Documents/EasyLinux/CMakeLists.txt /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/cat/Documents/EasyLinux/CMakeLists.txt /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/cat/Documents/EasyLinux/CMakeLists.txt /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /opt/Jetbrains/clion-2025.1.3/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.31"
+						"string" : "3.14"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "EasyLinux::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-EasyLinux-Debug-209cb3412c341371de4d.json",
-					"name" : "EasyLinux",
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-365568591941287461d8.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

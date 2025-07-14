@@ -146,12 +146,128 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "UNINITIALIZED",
 			"value" : "g++"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER_AR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/gcc-ar"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER_RANLIB",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/gcc-ranlib"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during all build types."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during DEBUG builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-g"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during MINSIZEREL builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-Os -DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during RELEASE builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-O3 -DNDEBUG"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flags used by the CXX compiler during RELWITHDEBINFO builds."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -1078,6 +1194,482 @@
 			"value" : "/home/cat/Documents/EasyLinux"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding PkgConfig"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/bin/pkg-config][v2.5.1()]"
+		},
+		{
+			"name" : "GTK3_CFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-I/usr/include/gtk-3.0;-I/usr/include/pango-1.0;-I/usr/include;-I/usr/include/cloudproviders;-I/usr/include/cairo;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/atk-1.0;-I/usr/include/dbus-1.0;-I/usr/lib/dbus-1.0/include;-I/usr/include/fribidi;-I/usr/include/pixman-1;-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gio-unix-2.0;-I/usr/include/glib-2.0;-I/usr/lib/glib-2.0/include;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/sysprof-6;-pthread"
+		},
+		{
+			"name" : "GTK3_CFLAGS_I",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_CFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-pthread"
+		},
+		{
+			"name" : "GTK3_FOUND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "GTK3_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "GTK3_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include;/usr/include/cloudproviders;/usr/include/cairo;/usr/include/gdk-pixbuf-2.0;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/atk-1.0;/usr/include/dbus-1.0;/usr/lib/dbus-1.0/include;/usr/include/fribidi;/usr/include/pixman-1;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gio-unix-2.0;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/libmount;/usr/include/blkid;/usr/include/sysprof-6"
+		},
+		{
+			"name" : "GTK3_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib;-lgtk-3;-lgdk-3;-lz;-lpangocairo-1.0;-lcairo-gobject;-lgdk_pixbuf-2.0;-latk-1.0;-lpango-1.0;-lcairo;-lharfbuzz;-lgio-2.0;-lgobject-2.0;-lglib-2.0"
+		},
+		{
+			"name" : "GTK3_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib"
+		},
+		{
+			"name" : "GTK3_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "gtk-3;gdk-3;z;pangocairo-1.0;cairo-gobject;gdk_pixbuf-2.0;atk-1.0;pango-1.0;cairo;harfbuzz;gio-2.0;gobject-2.0;glib-2.0"
+		},
+		{
+			"name" : "GTK3_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib"
+		},
+		{
+			"name" : "GTK3_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_LIBS_L",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_LIBS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_LIBS_PATHS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_MODULE_NAME",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "gtk+-3.0"
+		},
+		{
+			"name" : "GTK3_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr"
+		},
+		{
+			"name" : "GTK3_STATIC_CFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-I/usr/include/gtk-3.0;-I/usr/include/pango-1.0;-I/usr/include;-I/usr/include/cloudproviders;-I/usr/include/cairo;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/atk-1.0;-I/usr/include/dbus-1.0;-I/usr/lib/dbus-1.0/include;-I/usr/include/fribidi;-I/usr/include/pixman-1;-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gio-unix-2.0;-I/usr/include/glib-2.0;-I/usr/lib/glib-2.0/include;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/sysprof-6;-pthread;-DLZMA_API_STATIC;-DXML_STATIC"
+		},
+		{
+			"name" : "GTK3_STATIC_CFLAGS_I",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_STATIC_CFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-pthread;-DLZMA_API_STATIC;-DXML_STATIC"
+		},
+		{
+			"name" : "GTK3_STATIC_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include;/usr/include/cloudproviders;/usr/include/cairo;/usr/include/gdk-pixbuf-2.0;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/atk-1.0;/usr/include/dbus-1.0;/usr/lib/dbus-1.0/include;/usr/include/fribidi;/usr/include/pixman-1;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gio-unix-2.0;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/libmount;/usr/include/blkid;/usr/include/sysprof-6"
+		},
+		{
+			"name" : "GTK3_STATIC_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/usr/lib;-lgtk-3;-lgdk-3;-lz;-lpangocairo-1.0;-lm;-lXrandr;-lXcursor;-lXcomposite;-lXdamage;-lXinerama;-lcloudproviders;-lcairo-gobject;-lm;-ldl;-lgdk_pixbuf-2.0;-lm;-ltiff;-ljbig;-lz;-lm;-lzstd;-llzma;-pthread;-lpthread;-ljpeg;-latk-bridge-2.0;-latspi;-lXtst;-lXi;-lXfixes;-latk-1.0;-ldbus-1;-pthread;-lsystemd;-Wl,--export-dynamic;-lxkbcommon;-lwayland-cursor;-lwayland-egl;-lwayland-client;-lm;-pthread;-lrt;-lepoxy;-ldl;-lGL;-lEGL;-lpangoft2-1.0;-lm;-lpango-1.0;-lm;-lfribidi;-lthai;-ldatrie;-lXft;-lcairo;-lm;-ldl;-lfontconfig;-pthread;-lm;-lexpat;-lm;-lXext;-lXrender;-lX11;-lpthread;-lxcb-render;-lxcb-shm;-lxcb;-lXau;-lXdmcp;-lpixman-1;-lm;-pthread;-lharfbuzz-gobject;-lharfbuzz;-lm;-lfreetype;-lbz2;-lpng16;-lm;-lm;-lbrotlidec;-lbrotlicommon;-lgraphite2;-lgio-2.0;-lgobject-2.0;-lffi;-lgmodule-2.0;-pthread;-lglib-2.0;-lm;-lpcre2-8;-lz;-lmount;-lblkid;-lsysprof-capture-4;-pthread"
+		},
+		{
+			"name" : "GTK3_STATIC_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-pthread;-pthread;-Wl,--export-dynamic;-pthread;-pthread;-pthread;-pthread;-pthread"
+		},
+		{
+			"name" : "GTK3_STATIC_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_STATIC_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "gtk-3;gdk-3;z;pangocairo-1.0;m;Xrandr;Xcursor;Xcomposite;Xdamage;Xinerama;cloudproviders;cairo-gobject;m;dl;gdk_pixbuf-2.0;m;tiff;jbig;z;m;zstd;lzma;pthread;jpeg;atk-bridge-2.0;atspi;Xtst;Xi;Xfixes;atk-1.0;dbus-1;systemd;xkbcommon;wayland-cursor;wayland-egl;wayland-client;m;rt;epoxy;dl;GL;EGL;pangoft2-1.0;m;pango-1.0;m;fribidi;thai;datrie;Xft;cairo;m;dl;fontconfig;m;expat;m;Xext;Xrender;X11;pthread;xcb-render;xcb-shm;xcb;Xau;Xdmcp;pixman-1;m;harfbuzz-gobject;harfbuzz;m;freetype;bz2;png16;m;m;brotlidec;brotlicommon;graphite2;gio-2.0;gobject-2.0;ffi;gmodule-2.0;glib-2.0;m;pcre2-8;z;mount;blkid;sysprof-capture-4"
+		},
+		{
+			"name" : "GTK3_STATIC_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib"
+		},
+		{
+			"name" : "GTK3_STATIC_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_STATIC_LIBS_L",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_STATIC_LIBS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_STATIC_LIBS_PATHS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "3.24.49"
+		},
+		{
+			"name" : "GTK3_gtk+-3.0_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_gtk+-3.0_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_gtk+-3.0_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "GTK3_gtk+-3.0_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PKG_CONFIG_ARGN",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Arguments to supply to pkg-config"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "PKG_CONFIG_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "pkg-config executable"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/pkg-config"
+		},
+		{
+			"name" : "_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
 			"name" : "_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[
@@ -1100,6 +1692,250 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "__pkg_config_arguments_GTK3",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "REQUIRED;gtk+-3.0"
+		},
+		{
+			"name" : "__pkg_config_checked_GTK3",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_atk-1.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libatk-1.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_cairo",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libcairo.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_cairo-gobject",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libcairo-gobject.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_gdk-3",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libgdk-3.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_gdk_pixbuf-2.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libgdk_pixbuf-2.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_gio-2.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libgio-2.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_glib-2.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libglib-2.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_gobject-2.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libgobject-2.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_gtk-3",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libgtk-3.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_harfbuzz",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libharfbuzz.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_pango-1.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libpango-1.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_pangocairo-1.0",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libpangocairo-1.0.so"
+		},
+		{
+			"name" : "pkgcfg_lib_GTK3_z",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/lib/libz.so"
+		},
+		{
+			"name" : "prefix_result",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/lib"
 		}
 	],
 	"kind" : "cache",
