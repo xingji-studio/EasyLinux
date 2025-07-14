@@ -1,23 +1,22 @@
-cmake_minimum_required (VERSION 3.14)
-project (EasyLinux)
+cmake_minimum_required(VERSION 3.31)
+project(untitled)
 
-if (CMAKE_SYSTEM_NAME MATCHES "Linux")
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
-    message(STATUS "----- GTK3_INCLUDE_DIRS: ${GTK3_INCLUDE_DIRS}")
-    message(STATUS "----- GKT3_LIBRARIES: ${GTK3_LIBRARIES}")
-    message(STATUS "----- GTK3_LINK_LIBRARIES: ${GTK3_LINK_LIBRARIES}")
-    include_directories(${GTK3_INCLUDE_DIRS})
-    link_directories(${GTK3_LIBRARY_DIRS})
-    list(APPEND FC_DEP_LIBS ${GTK3_LIBRARIES})
-endif()
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-add_executable (main
-        src/main.c
+
+find_package(Qt6 COMPONENTS
+        Core
+        Gui
+        Widgets
+        REQUIRED)
+
+add_executable(untitled main.cpp)
+target_link_libraries(untitled
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
 )
 
-#add_definitions (${GTK3_CFLAGS_OTHER})
-message(STATUS "----- ${GTK3_CFLAGS_OTHER}")
-# -pthread
-
-target_link_libraries (main ${FC_DEP_LIBS})
