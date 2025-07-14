@@ -1,3 +1,0 @@
-/home/cat/Documents/EasyLinux/build/CMakeFiles/main.dir
-/home/cat/Documents/EasyLinux/build/CMakeFiles/edit_cache.dir
-/home/cat/Documents/EasyLinux/build/CMakeFiles/rebuild_cache.dir
