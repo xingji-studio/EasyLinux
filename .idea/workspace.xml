@@ -28,7 +28,57 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c07a03-dafa-4e37-b748-f3ee51504fbc" name="Changes" comment="" />
+    <list default="true" id="e2c07a03-dafa-4e37-b748-f3ee51504fbc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyLinux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/query/client-vscode/query.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/cache-v2-c0433dc08f6264b01262.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/cmakeFiles-v1-6d284e741e10750d3224.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/codemodel-v2-df1798d1dfa9d6992e28.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/index-2025-07-14T04-24-28-0076.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/target-main-Debug-cc15641c75c1a07dc43d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/.cmake/api/v1/reply/toolchains-v1-1726135e1824a66542a0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/4.0.3-dirty/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/InstallScripts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/compiler_depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/compiler_depend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/main.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +166,8 @@
       <workItem from="1752469318723" duration="251000" />
       <workItem from="1752469578036" duration="406000" />
       <workItem from="1752469997349" duration="6134000" />
-      <workItem from="1752488009255" duration="925000" />
+      <workItem from="1752488009255" duration="1428000" />
+      <workItem from="1752492349081" duration="2000" />
     </task>
     <servers />
   </component>
