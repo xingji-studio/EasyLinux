@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EasyLinux.iml" filepath="$PROJECT_DIR$/.idea/EasyLinux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EasyLinux2.iml" filepath="$PROJECT_DIR$/.idea/EasyLinux2.iml" />
     </modules>
   </component>
 </project>
