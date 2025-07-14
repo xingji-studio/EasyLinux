@@ -12,8 +12,9 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     list(APPEND FC_DEP_LIBS ${GTK3_LIBRARIES})
 endif()
 
-add_executable (main src/main.c
-        )
+add_executable (main
+        src/main.c
+)
 
 #add_definitions (${GTK3_CFLAGS_OTHER})
 message(STATUS "----- ${GTK3_CFLAGS_OTHER}")
