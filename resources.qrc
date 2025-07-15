@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/FiraSans-Bold.ttf</file>
+        <file>pictures/tux.svg</file>
+    </qresource>
+</RCC>
