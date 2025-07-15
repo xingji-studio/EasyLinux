@@ -1,11 +1,22 @@
+/*
+ * main.c
+ * Copyleft (ɔ) 2025 POINT Org., XINGJI Studio.
+ *
+ * 此程序是自由软件：您可以根据自由软件基金会发布的 GNU 通用公共许可证条款重新分发和/或修改它，
+ * 许可证版本 3 (GPLv3)。
+ *
+ * 分发此程序是希望它有用，但**没有任何担保**；甚至没有适销性或特定用途适用性的默示担保。
+ * 有关详细信息，请参阅 GNU 通用公共许可证。
+ *
+ * 您应已随此程序收到 GNU GPLv3 的副本。如果没有，请访问 <http://www.gnu.org/licenses/>.
+ */
+
 #include <QApplication>
 #include <QThread>
 #include <QPropertyAnimation>
 
 #include "MainWindow.h"
 #include "SplashScreen.h"
-
-
 
 
 int main(int argc, char *argv[]) {
@@ -29,7 +40,7 @@ int main(int argc, char *argv[]) {
     };
 
     for (int i = 0; i <= 100; i += 5) {
-        const int stepIndex = qMin(i / 20, loadingSteps.size() - 1);
+        const int stepIndex = static_cast<int>(qMin(i / 20, loadingSteps.size() - 1));
         splash.updateProgress(i, loadingSteps[stepIndex]);
         QThread::msleep(50); // 睡50毫秒
         QApplication::processEvents();
