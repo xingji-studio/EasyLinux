@@ -2,7 +2,10 @@
 // Created by cat on 25-7-15.
 //
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
+#include <QMainWindow>
 
-#endif //MAINWINDOW_H
+class MainWindow : public QMainWindow {
+public:
+    explicit MainWindow(QWidget *parent = nullptr);
+};

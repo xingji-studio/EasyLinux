@@ -13,7 +13,15 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(EasyLinux main.cpp)
+include_directories(include)
+
+add_executable(EasyLinux
+        src/main.cpp
+        resources.qrc
+        src/SplashScreen.cpp
+        include/SplashScreen.h
+        src/MainWindow.cpp
+        include/MainWindow.h)
 target_link_libraries(EasyLinux
         Qt::Core
         Qt::Gui
