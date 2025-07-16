@@ -1,0 +1,5 @@
+/home/cat/Documents/EasyLinux/cmake-build-debug/CMakeFiles/EasyLinux.dir
+/home/cat/Documents/EasyLinux/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cat/Documents/EasyLinux/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/cat/Documents/EasyLinux/cmake-build-debug/CMakeFiles/EasyLinux_autogen_timestamp_deps.dir
+/home/cat/Documents/EasyLinux/cmake-build-debug/CMakeFiles/EasyLinux_autogen.dir
