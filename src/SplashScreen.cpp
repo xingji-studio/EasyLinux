@@ -15,10 +15,10 @@
 #include "SplashScreen.h"
 
 SplashScreen::SplashScreen(QWidget *parent) : QWidget(parent) {
-    // 无边框窗口
+    // 设置无边框窗口
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
-    // 字体
+    // 加载自定义字体
     const int fontId = QFontDatabase::addApplicationFont(":/fonts/FiraSans-Bold.ttf");
     const QStringList fontFamilies = QFontDatabase::applicationFontFamilies(fontId);
 

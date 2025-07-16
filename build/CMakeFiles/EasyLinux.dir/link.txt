@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/EasyLinux.dir/link.d CMakeFiles/EasyLinux.dir/EasyLinux_autogen/mocs_compilation.cpp.o CMakeFiles/EasyLinux.dir/main.cpp.o -o EasyLinux  /usr/lib/libQt6Widgets.so.6.9.1 /usr/lib/libQt6Gui.so.6.9.1 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.9.1
