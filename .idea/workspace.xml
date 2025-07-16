@@ -30,7 +30,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48b1a278-e924-4be8-af00-98cace1b4b5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +80,6 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="48b1a278-e924-4be8-af00-98cace1b4b5c" name="Changes" comment="" />
@@ -101,6 +93,8 @@
       <workItem from="1752564366891" duration="402000" />
       <workItem from="1752630811295" duration="209000" />
       <workItem from="1752632777730" duration="1000" />
+      <workItem from="1752633375507" duration="35000" />
+      <workItem from="1752633532842" duration="1000" />
     </task>
     <servers />
   </component>
