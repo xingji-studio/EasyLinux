@@ -5,12 +5,14 @@
 #include "MainWindow.h"
 #include "SplashScreen.h"
 
+#define VERSION "alpha 1.1"
+
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
     // 创建启动画面
-    SplashScreen splash;
+    SplashScreen splash(nullptr, VERSION);
     splash.show();
 
     // 强制立即显示
@@ -27,7 +29,7 @@ int main(int argc, char *argv[]) {
     };
 
     for (int i = 0; i <= 100; i += 5) {
-        const int stepIndex = qMin(i / 20, loadingSteps.size() - 1);
+        const int stepIndex = qMin<int, int>(i / 20, int(loadingSteps.size() - 1));
         splash.updateProgress(i, loadingSteps[stepIndex]);
         QThread::msleep(50); // 睡50毫秒
         QApplication::processEvents();
@@ -37,7 +39,7 @@ int main(int argc, char *argv[]) {
 
     // 淡入动画
     auto *fadeIn = new QPropertyAnimation(&mainWindow, "windowOpacity");
-    fadeIn->setDuration(800);
+    fadeIn->setDuration(300);
     fadeIn->setStartValue(0.0);
     fadeIn->setEndValue(1.0);
     fadeIn->setEasingCurve(QEasingCurve::OutCubic);

@@ -9,7 +9,7 @@
 
 class SplashScreen final : public QWidget {
 public:
-    explicit SplashScreen(QWidget *parent = nullptr);
+    explicit SplashScreen(QWidget *parent = nullptr, const QString &VERSION = "");
     void updateProgress(const int value, const QString &status) const;
 
 private:

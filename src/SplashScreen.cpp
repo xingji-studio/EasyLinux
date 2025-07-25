@@ -14,7 +14,10 @@
 
 #include "SplashScreen.h"
 
-SplashScreen::SplashScreen(QWidget *parent) : QWidget(parent) {
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "MemoryLeak"
+
+SplashScreen::SplashScreen(QWidget *parent, const QString &VERSION) : QWidget(parent) {
     // 设置无边框窗口
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
@@ -44,12 +47,17 @@ SplashScreen::SplashScreen(QWidget *parent) : QWidget(parent) {
     subtitleLabel->setStyleSheet("QLabel { color: #ecf0f1; font-size: 18px; }");
     mainLayout->addWidget(subtitleLabel);
 
-    // Tux 动画
+    // Tux 图片
     auto *tuxLabel = new QLabel(this);
-    auto *tuxMovie = new QMovie(":/pictures/tux.svg", QByteArray(), tuxLabel);
-    tuxLabel->setMovie(tuxMovie);
+    // auto *tuxMovie = new QMovie(":/pictures/tux.svg", QByteArray(), tuxLabel);
+    QPixmap tuxPicture;
+    tuxPicture.load(":/pictures/tux.svg");
+    tuxPicture = tuxPicture.scaled(200, 200);
+    tuxLabel->setPixmap(tuxPicture);
+    // tuxLabel->setMovie(tuxMovie);
     tuxLabel->setAlignment(Qt::AlignCenter);
-    tuxMovie->start();
+    // tuxLabel->setScaledContents(true); // 缩放
+    // tuxMovie->start();
     mainLayout->addWidget(tuxLabel);
 
     // 进度条
@@ -87,7 +95,7 @@ SplashScreen::SplashScreen(QWidget *parent) : QWidget(parent) {
     mainLayout->addWidget(hintLabel);
 
     // 版本信息
-    auto *versionLabel = new QLabel("版本 1.0 · 基于 Qt 6.5", this);
+    auto *versionLabel = new QLabel(VERSION, this);
     versionLabel->setAlignment(Qt::AlignCenter);
     versionLabel->setStyleSheet("QLabel { color: #ecf0f1; font-size: 12px; opacity: 0.6; }");
     mainLayout->addWidget(versionLabel);
@@ -122,3 +130,5 @@ void SplashScreen::paintEvent(QPaintEvent *event) {
 
     QWidget::paintEvent(event);
 }
+
+#pragma clang diagnostic pop

@@ -1,7 +1,3 @@
-//
-// Created by cat on 25-7-15.
-//
-
 #include <QLabel>
 #include <QBoxLayout>
 #include <QPainter>
@@ -9,6 +5,9 @@
 
 
 #include "MainWindow.h"
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "MemoryLeak"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowTitle("EasyLinux - Linux 新手指南");
@@ -116,3 +115,5 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowOpacity(0.0);
 }
 
+
+#pragma clang diagnostic pop
