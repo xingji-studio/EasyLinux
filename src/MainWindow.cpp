@@ -1,7 +1,21 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyleft (ɔ) 2025 POINT org., XINGJI Studio.
+ *
+ * 此程序是自由软件：您可以根据自由软件基金会发布的 GNU 通用公共许可证条款重新分发和/或修改它，
+ * 许可证版本 3（GPLv3）或任何更高版本（由您选择）。
+ *
+ * 分发此程序是希望它有用，但**没有任何担保**；甚至没有适销性或特定用途适用性的默示担保。
+ * 有关详细信息，请参阅 GNU 通用公共许可证。
+ *
+ * 您应已随此程序收到 GNU GPLv3 的副本。如果没有，请访问 <http://www.gnu.org/licenses/>.
+ */
+
 #include <QLabel>
 #include <QBoxLayout>
 #include <QPainter>
 #include <QFontDatabase>
+#include <QPushButton>
 
 
 #include "MainWindow.h"
@@ -37,13 +51,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     subtitleLabel->setStyleSheet("QLabel { color: rgba(255,255,255,0.8); }");
     headerLayout->addWidget(subtitleLabel);
 
+    auto *settingsButton = new QPushButton("选项 ⚙\uFE0F", header);
+    settingsButton->setStyleSheet("border:2px solid #ffffff; border-radius: 6px;");
+
+    headerLayout->addWidget(settingsButton);
+
     // 主内容区域
     auto *contentWidget = new QWidget(centralWidget);
     auto *contentLayout = new QVBoxLayout(contentWidget);
     contentLayout->setContentsMargins(40, 40, 40, 40);
 
     auto *welcomeLabel = new QLabel("欢迎使用 EasyLinux", contentWidget);
-    welcomeLabel->setStyleSheet("QLabel { font-size: 28px; font-weight: bold; color: #2c3e50; }");
+    welcomeLabel->setStyleSheet("QLabel { font-size: 28px; font-weight: bold; }");
     contentLayout->addWidget(welcomeLabel);
 
     auto *descriptionLabel = new QLabel(
@@ -54,7 +73,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         contentWidget
     );
     descriptionLabel->setWordWrap(true);
-    descriptionLabel->setStyleSheet("QLabel { font-size: 16px; color: #34495e; line-height: 1.5; }");
+    descriptionLabel->setStyleSheet("QLabel { font-size: 16px;  line-height: 1.5; }");
     contentLayout->addWidget(descriptionLabel);
 
     contentLayout->addStretch();
@@ -64,46 +83,46 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     auto *cardsLayout = new QHBoxLayout(cardsWidget);
     cardsLayout->setSpacing(20);
 
-    auto createCard = [](const QString &title, const QString &desc, const QColor &color) -> QWidget* {
-        auto *card = new QWidget();
-        card->setStyleSheet(QString(
-            "QWidget { background: white; border-radius: 10px; }"
-            "QLabel { padding: 15px; }"
-        ));
+//    auto createCard = [](const QString &title, const QString &desc, const QColor &color) -> QWidget* {
+//        auto *card = new QWidget();
+//        card->setStyleSheet(QString(
+//            "QWidget { background: white; border-radius: 10px; }"
+//            "QLabel { padding: 15px; }"
+//        ));
+//
+//        auto *cardLayout = new QVBoxLayout(card);
+//
+//        auto *titleLabel = new QLabel(title, card);
+//        titleLabel->setStyleSheet(QString("font-size: 18px; font-weight: bold; color: %1;").arg(color.name()));
+//        cardLayout->addWidget(titleLabel);
+//
+//        auto *descLabel = new QLabel(desc, card);
+//        descLabel->setWordWrap(true);
+//        descLabel->setStyleSheet("color: #7f8c8d;");
+//        cardLayout->addWidget(descLabel);
+//
+//        return card;
+//    };
 
-        auto *cardLayout = new QVBoxLayout(card);
-
-        auto *titleLabel = new QLabel(title, card);
-        titleLabel->setStyleSheet(QString("font-size: 18px; font-weight: bold; color: %1;").arg(color.name()));
-        cardLayout->addWidget(titleLabel);
-
-        auto *descLabel = new QLabel(desc, card);
-        descLabel->setWordWrap(true);
-        descLabel->setStyleSheet("color: #7f8c8d;");
-        cardLayout->addWidget(descLabel);
-
-        return card;
-    };
-
-    cardsLayout->addWidget(createCard(
-        "命令学习",
-        "通过交互式终端学习常用 Linux 命令",
-        QColor(0xe74c3c)
-    ));
-
-    cardsLayout->addWidget(createCard(
-        "文件系统",
-        "理解 Linux 文件系统结构与权限管理",
-        QColor(0x3498db)
-    ));
-
-    cardsLayout->addWidget(createCard(
-        "软件管理",
-        "掌握软件安装、更新和包管理工具",
-        QColor(0x2ecc71)
-    ));
-
-    contentLayout->addWidget(cardsWidget);
+//    cardsLayout->addWidget(createCard(
+//        "命令学习",
+//        "通过交互式终端学习常用 Linux 命令",
+//        QColor(0xe74c3c)
+//    ));
+//
+//    cardsLayout->addWidget(createCard(
+//        "文件系统",
+//        "理解 Linux 文件系统结构与权限管理",
+//        QColor(0x3498db)
+//    ));
+//
+//    cardsLayout->addWidget(createCard(
+//        "软件管理",
+//        "掌握软件安装、更新和包管理工具",
+//        QColor(0x2ecc71)
+//    ));
+//
+//    contentLayout->addWidget(cardsWidget);
 
     // 添加到主布局
     mainLayout->addWidget(header);

@@ -24,14 +24,13 @@ int main(int argc, char *argv[]) {
         "初始化用户界面...",
         "准备学习资源...",
         "检查系统兼容性...",
-        "优化性能设置...",
         "启动交互式教程..."
     };
 
     for (int i = 0; i <= 100; i += 5) {
         const int stepIndex = qMin<int, int>(i / 20, int(loadingSteps.size() - 1));
         splash.updateProgress(i, loadingSteps[stepIndex]);
-        QThread::msleep(50); // 睡50毫秒
+        QThread::msleep(50); // 睡50毫秒, 当加载了
         QApplication::processEvents();
     }
 
