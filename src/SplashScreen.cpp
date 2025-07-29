@@ -10,7 +10,7 @@
 #include <QScreen>
 #include <QPainter>
 #include <QFontDatabase>
-#include <QMovie>
+// #include <QMovie>
 
 #include "SplashScreen.h"
 
@@ -108,7 +108,7 @@ SplashScreen::SplashScreen(QWidget *parent, const QString &VERSION) : QWidget(pa
     move(screen->geometry().center() - rect().center());
 }
 
-void SplashScreen::updateProgress(const int value, const QString &status) const {
+void SplashScreen::updateProgress(int value, const QString &status) const {
     progressBar->setValue(value);
     statusLabel->setText(status);
     QApplication::processEvents();

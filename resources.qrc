@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>fonts/FiraSans-Bold.ttf</file>
         <file>pictures/tux.svg</file>
+        <file>pictures/Archlinux.png</file>
     </qresource>
 </RCC>

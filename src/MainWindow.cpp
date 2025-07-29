@@ -17,18 +17,18 @@
 #include <QFontDatabase>
 #include <QPushButton>
 
-
 #include "MainWindow.h"
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "MemoryLeak"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-    setWindowTitle("EasyLinux - Linux 新手指南");
-    resize(1000, 700);
+    this->setWindowTitle("EasyLinux - Linux 新手指南");
+    this->resize(1000, 700);
 
     // 创建主部件
     auto *centralWidget = new QWidget(this);
+    centralWidget->setStyleSheet("background: black");
     auto *mainLayout = new QVBoxLayout(centralWidget);
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
@@ -47,12 +47,19 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     headerLayout->addStretch();
 
-    auto *subtitleLabel = new QLabel("Linux 学习助手", header);
-    subtitleLabel->setStyleSheet("QLabel { color: rgba(255,255,255,0.8); }");
-    headerLayout->addWidget(subtitleLabel);
+//    auto *subtitleLabel = new QLabel("Linux 学习助手", header);
+//    subtitleLabel->setStyleSheet("QLabel { color: rgba(255,255,255,0.8); }");
+//    headerLayout->addWidget(subtitleLabel);
 
     auto *settingsButton = new QPushButton("选项 ⚙\uFE0F", header);
-    settingsButton->setStyleSheet("border:2px solid #ffffff; border-radius: 6px;");
+    settingsButton->setStyleSheet("QPushButton { "
+                                  "border:0px solid #ffffff; "
+                                  "border-radius: 6px; "
+                                  "} QPushButton:hover {"
+                                  "background-color: #111111; "
+                                  "color: white; "
+                                  "}");
+
 
     headerLayout->addWidget(settingsButton);
 
@@ -61,27 +68,49 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     auto *contentLayout = new QVBoxLayout(contentWidget);
     contentLayout->setContentsMargins(40, 40, 40, 40);
 
-    auto *welcomeLabel = new QLabel("欢迎使用 EasyLinux", contentWidget);
-    welcomeLabel->setStyleSheet("QLabel { font-size: 28px; font-weight: bold; }");
-    contentLayout->addWidget(welcomeLabel);
+    this->p_welcomeLabel = new QLabel("欢迎使用 EasyLinux", contentWidget);
+    this->p_welcomeLabel->setStyleSheet("QLabel { font-size: 28px; font-weight: bold; color: #5DADE2 }");
+    contentLayout->addWidget(this->p_welcomeLabel);
 
-    auto *descriptionLabel = new QLabel(
+    this->p_descriptionLabel = new QLabel(
         "无论您是刚接触 Linux 的新手，还是从 Windows 转来的用户，"
         "EasyLinux 都旨在为您提供最友好的学习体验。\n\n"
         "通过互动教程、命令行模拟器和实时帮助，"
         "您将快速掌握 Linux 的核心概念和日常操作。",
         contentWidget
     );
-    descriptionLabel->setWordWrap(true);
-    descriptionLabel->setStyleSheet("QLabel { font-size: 16px;  line-height: 1.5; }");
-    contentLayout->addWidget(descriptionLabel);
+    this->p_descriptionLabel->setWordWrap(true);
+    this->p_descriptionLabel->setStyleSheet("QLabel { font-size: 16px;  line-height: 1.5; color: #5DADE2; }");
+    contentLayout->addWidget(this->p_descriptionLabel);
 
     contentLayout->addStretch();
+    auto *startWidget = new QWidget(contentWidget);
+    auto *startLayout = new QHBoxLayout(startWidget);
+
+    auto *archLinuxLabel = new QLabel(startWidget);
+    QPixmap archLinuxPic;
+    archLinuxPic.load(":/pictures/Archlinux.png");
+    archLinuxPic = archLinuxPic.scaled(388, 500);
+    archLinuxLabel->setPixmap(archLinuxPic);
+    archLinuxLabel->setAlignment(Qt::AlignCenter);
+    startLayout->addWidget(archLinuxLabel);
+
+    auto *startButton = new QPushButton("启动！", startWidget);
+    startButton->setStyleSheet("QPushButton { "
+                             "border:2px solid #3498db; "
+                             "border-radius: 6px;"
+                             "} QPushButton:hover {"
+                             "background-color: #111111; "
+                             "color: white; "
+                             "}");
+    startLayout->addWidget(startButton);
+
+    contentLayout->addWidget(startWidget);
 
     // 功能卡片布局
-    auto *cardsWidget = new QWidget(contentWidget);
-    auto *cardsLayout = new QHBoxLayout(cardsWidget);
-    cardsLayout->setSpacing(20);
+//    auto *cardsWidget = new QWidget(contentWidget);
+//    auto *cardsLayout = new QHBoxLayout(cardsWidget);
+//    cardsLayout->setSpacing(20);
 
 //    auto createCard = [](const QString &title, const QString &desc, const QColor &color) -> QWidget* {
 //        auto *card = new QWidget();
@@ -134,5 +163,17 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowOpacity(0.0);
 }
 
+void MainWindow::setWelecomeLabelText(QString& newText) {
+    this->p_welcomeLabel->setText(newText);
+}
+
+void MainWindow::setDescriptionLabelText(QString& newText) {
+    this->p_descriptionLabel->setText(newText);
+}
+
+MainWindow::~MainWindow() {
+    delete this->p_descriptionLabel;
+    delete this->p_welcomeLabel;
+}
 
 #pragma clang diagnostic pop
