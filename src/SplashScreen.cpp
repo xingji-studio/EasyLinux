@@ -83,13 +83,13 @@ SplashScreen::SplashScreen(QWidget *parent, const QString &VERSION) : QWidget(pa
     mainLayout->addWidget(progressBar);
 
     // 状态文本
-    statusLabel = new QLabel("正在启动 EasyLinux...", this);
+    statusLabel = new QLabel(tr("正在启动 EasyLinux..."), this);
     statusLabel->setAlignment(Qt::AlignCenter);
     statusLabel->setStyleSheet("QLabel { color: #ecf0f1; }");
     mainLayout->addWidget(statusLabel);
 
     // 提示文本
-    auto *hintLabel = new QLabel("专为 Linux 新手设计的友好学习环境", this);
+    auto *hintLabel = new QLabel(tr("专为 Linux 新手设计的友好学习环境"), this);
     hintLabel->setAlignment(Qt::AlignCenter);
     hintLabel->setStyleSheet("QLabel { color: #ecf0f1; font-style: italic; opacity: 0.8; }");
     mainLayout->addWidget(hintLabel);

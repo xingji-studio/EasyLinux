@@ -16,14 +16,44 @@
 #include <QPainter>
 #include <QFontDatabase>
 #include <QPushButton>
+#include <memory>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QInputDialog>
+#include <QRandomGenerator>
+#include <QErrorMessage>
 
 #include "MainWindow.h"
+#include "StickyNote.h"
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "MemoryLeak"
 
+
+int getFileLineCount(const QString& filePath) {
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "无法打开文件:" << file.errorString();
+        return -1;
+    }
+
+    QTextStream in(&file);
+    int lineCount = 0;
+
+    // 高效读取方式：使用 readLine() 但不存储内容
+    while (!in.atEnd()) {
+        in.readLine();
+        lineCount++;
+    }
+
+    file.close();
+    return lineCount;
+}
+
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-    this->setWindowTitle("EasyLinux - Linux 新手指南");
+    this->setWindowTitle(tr("EasyLinux - Linux 新手指南"));
     this->resize(1000, 700);
 
     // 创建主部件
@@ -73,10 +103,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     contentLayout->addWidget(this->p_welcomeLabel);
 
     this->p_descriptionLabel = new QLabel(
-        "无论您是刚接触 Linux 的新手，还是从 Windows 转来的用户，"
+        tr("无论您是刚接触 Linux 的新手，还是从 Windows 转来的用户，"
         "EasyLinux 都旨在为您提供最友好的学习体验。\n\n"
         "通过互动教程、命令行模拟器和实时帮助，"
-        "您将快速掌握 Linux 的核心概念和日常操作。",
+        "您将快速掌握 Linux 的核心概念和日常操作。"),
         contentWidget
     );
     this->p_descriptionLabel->setWordWrap(true);
@@ -95,17 +125,30 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     archLinuxLabel->setAlignment(Qt::AlignCenter);
     startLayout->addWidget(archLinuxLabel);
 
-    auto *startButton = new QPushButton("启动！", startWidget);
+    auto *buttonAndNotesWidget = new QWidget(startWidget);
+    auto *buttonAndNotesLayout = new QVBoxLayout(buttonAndNotesWidget);
+
+    QString noteText = "Test";
+    std::unique_ptr<StickyNote>
+    stickyNote(new StickyNote(buttonAndNotesWidget, buttonAndNotesLayout, noteText));
+
+    auto *startButton = new QPushButton(tr("启动！"), buttonAndNotesWidget);
     startButton->setStyleSheet("QPushButton { "
                              "border:2px solid #3498db; "
                              "border-radius: 6px;"
+                             "min-width: 10px;"   // 最小宽度
+                             "min-height: 10px;"   // 最小高度
+                             "max-height: 80px;"
+                             "font-size: 30px"
                              "} QPushButton:hover {"
                              "background-color: #111111; "
                              "color: white; "
                              "}");
-    startLayout->addWidget(startButton);
-
+    buttonAndNotesLayout->addWidget(startButton);
+    startLayout->addWidget(buttonAndNotesWidget);
     contentLayout->addWidget(startWidget);
+
+
 
     // 功能卡片布局
 //    auto *cardsWidget = new QWidget(contentWidget);
@@ -160,10 +203,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setCentralWidget(centralWidget);
 
     // 初始设置为透明
-    setWindowOpacity(0.0);
+    // setWindowOpacity(0.0);
 }
 
-void MainWindow::setWelecomeLabelText(QString& newText) {
+void MainWindow::setWelcomeLabelText(QString& newText) {
     this->p_welcomeLabel->setText(newText);
 }
 
@@ -171,9 +214,78 @@ void MainWindow::setDescriptionLabelText(QString& newText) {
     this->p_descriptionLabel->setText(newText);
 }
 
-MainWindow::~MainWindow() {
-    delete this->p_descriptionLabel;
-    delete this->p_welcomeLabel;
+void MainWindow::greet() {
+    int launchedTimes;
+    QString userName;
+
+    QFile file("config.json");
+    if (file.open(QIODevice::ReadWrite)) { // 读取文件，解析出启动次数
+        QByteArray data = file.readAll();
+        QJsonParseError error;
+        QJsonDocument doc = QJsonDocument::fromJson(data, &error);
+
+        if (error.error == QJsonParseError::NoError && doc.isObject()) {
+            QJsonObject config = doc.object();
+            launchedTimes = config["TIMES"].toInt();
+            userName = config["NAME"].toString();
+            file.seek(0);
+            config["TIMES"] = launchedTimes + 1;
+            QJsonDocument newDoc(config);
+            file.write(newDoc.toJson());
+            file.resize(file.pos());
+        } else { // 未找 config.json 到或文件格式错误
+            qDebug() << "MainWindow::greet() err:" << error.errorString();
+            // 创建 JSON 对象并插入数据
+            QJsonObject config;
+            config["TIMES"] = 1;
+            bool ok;
+            QString text = QInputDialog::getText(
+                    this,                 // 父窗口
+                    tr("尊姓大名?"),             // 对话框标题
+                    tr("用户名:"),            // 提示文本
+                    QLineEdit::Normal,            // 输入模式
+                    tr(""),                 // 默认文本
+                    &ok                           // 返回用户是否点击OK
+            );
+
+            if (ok) {
+                config["NAME"] = text;
+            }
+            // 将对象转为 JSON 文档并保存
+            QJsonDocument doc(config);
+            QFile file("config.json");
+            if (file.open(QIODevice::WriteOnly)) {
+                file.write(doc.toJson()); // 默认带缩进格式
+                file.close();
+            }
+            return;
+        }
+    }
+    int indexOfGreetingWords = QRandomGenerator::global()->bounded(0, getFileLineCount("greetings.txt"));
+    QFile greetings("greetings.txt");
+    if (greetings.open(QIODevice::ReadOnly)) {
+        QString greetingWord = greetings.readAll();
+        // qDebug() << greetingWord;
+        QStringList greetingWordsList = greetingWord.split("\n");
+        this->setWelcomeLabelText(greetingWordsList[indexOfGreetingWords]);
+    }
+
+#define SUCCESS 0
+
+    if (system("fortune > ./fortune_words.txt") == SUCCESS) {
+        QFile fortuneWords("fortune_words.txt");
+        if (fortuneWords.open(QIODevice::ReadOnly)) {
+            QString readFortuneWords = fortuneWords.readAll();
+            readFortuneWords = "\n\n" + readFortuneWords;
+            this->setDescriptionLabelText(readFortuneWords);
+        }
+    } else {
+        QErrorMessage fileNotFound(this);
+        fileNotFound.showMessage(
+                tr("This application depends on the following applications for correct operation. "
+                   "\n \t fortune.You can try to install it with your package manager"));
+        fileNotFound.exec();
+    }
 }
 
 #pragma clang diagnostic pop

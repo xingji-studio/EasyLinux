@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.31)
+cmake_minimum_required(VERSION 3.30)
 project(EasyLinux)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -21,9 +21,12 @@ add_executable(EasyLinux
         src/SplashScreen.cpp
         include/SplashScreen.h
         src/MainWindow.cpp
-        include/MainWindow.h)
+        include/MainWindow.h
+        src/StickyNote.cpp
+        include/StickyNote.h)
 target_link_libraries(EasyLinux
         Qt::Core
         Qt::Gui
         Qt::Widgets
 )
+

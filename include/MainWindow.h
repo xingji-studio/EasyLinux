@@ -13,7 +13,7 @@ private:
     QLabel *p_descriptionLabel;
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-    void setWelecomeLabelText(QString& newText);
+    void setWelcomeLabelText(QString& newText);
     void setDescriptionLabelText(QString& newText);
+    void greet();
 };
